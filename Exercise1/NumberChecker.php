@@ -2,18 +2,13 @@
 class NumberChecker
 {
 
-
-    public function __construct(private int $number)
+    public function isEven(int $number): bool
     {
+        return $number % 2 == 0;
     }
-
-    public function isEven(): bool
+    public function isPositive(int|float $number): bool
     {
-        return $this->number % 2 == 0;
-    }
-    public function isPositive(): bool
-    {
-        return $this->number > 0;
+        return $number > 0;
     }
 
 }
